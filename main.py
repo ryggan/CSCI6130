@@ -12,7 +12,7 @@ for unsorted_list in X:
     output = list(map(lambda x: int(x), output))
 
     print("Reward: " + str(reward.evaluate_sorting(output)))
-    print("Unsorted: " + str(unsorted_list))
+    print("Input: " + str(unsorted_list))
     print("Output: " + str(output))
     unsorted_list.sort()
-    print("Expeced: " + str(unsorted_list))
+    print("Expected: " + str(unsorted_list))
