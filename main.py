@@ -1,20 +1,12 @@
 import brainfuck
 import compiler
+from utils import prepare_list
 
 # Input list
 unsorted_list = [9, 1, 6, 3]
 sorted_list = unsorted_list.sort()
 
-# Prepare our Brainfuck code
-code = ""
-for digit in unsorted_list:
-    for _ in range(ord(str(digit))):
-        code += "+"
-    code += ">"
-
-# Move pointer to beginning
-for _ in range(len(unsorted_list) + 1):
-    code += "<"
+code = prepare_list(unsorted_list)
 
 # Print the content of every
 for _ in range(len(unsorted_list)):
