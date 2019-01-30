@@ -10,4 +10,7 @@ def prepare_list(data):
     for _ in range(len(data) + 1):
         code += "<"
 
+    for _ in range(len(data)):
+        code += ".>"
+
     return code
